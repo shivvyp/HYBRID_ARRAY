@@ -48,7 +48,7 @@ data.frame(Name=complete_set$Name,Sequence=final.oligoDrc) %>% write.csv("/Users
 #read in the file gain 
 gRNAtable_full <- read.csv("/Users/shivanipatel/Desktop/Total gRNA counts /oct1023_S_twist.csv")
 
-gRNAtable_full <- gRNAtable_full %>% rename(Sequence = "grna_seq_with_pam")
+gRNAtable_full <- gRNAtable_full %>% rename("grna_seq_with_pam"=Sequence)
 
 grna <- bind_cols(gRNAtable_full, Tot_guides, by = "grna_seq_with_pam")
 
